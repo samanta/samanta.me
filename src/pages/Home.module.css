@@ -1,0 +1,212 @@
+.section .ctas {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  gap: calc(var(--size-1) * 3);
+}
+
+.hero {
+  padding-block-end: calc(var(--size-1) * 4);
+}
+
+.hero .image img {
+  border-radius: 100%;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.work {
+  background-color: var(--color-cyan);
+
+  padding-block-start: calc(var(--size-1) * 25);
+  padding-block-end: calc(var(--size-1) * 38);
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 70%);
+}
+
+.section p a {
+  color: var(--color-royal-blue);
+  font-family: var(--font-family-regular);
+  font-size: var(--font-size-normal);
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+.mentoring {
+  background-color: var(--color-royal-blue);
+  color: var(--color-white);
+
+  padding-block-start: calc(var(--size-1) * 40);
+  padding-block-end: calc(var(--size-1) * 30);
+  clip-path: polygon(0 40%, 100% 0, 100% 70%, 0 100%);
+
+  margin-top: calc(var(--size-1) * -44);
+  z-index: 2;
+}
+
+.mentoring h2 {
+  color: var(--color-yellow);
+}
+
+.ux {
+  background-color: var(--color-yellow);
+
+  padding-block-start: calc(var(--size-1) * 38);
+  padding-block-end: calc(var(--size-1) * 51);
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+
+  margin-top: calc(var(--size-1) * -40);
+  position: relative;
+  z-index: 3;
+}
+
+.ux .links {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--size-1) * 3);
+}
+
+.ux .link svg {
+  fill: var(--color-royal-blue);
+}
+
+.ux .link:focus svg,
+.ux .link:active svg,
+.ux .link:hover svg {
+  fill: var(--color-white);
+}
+
+.ux .image img {
+  width: 367px;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.ux .content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.ux > :last-child {
+  padding-block-end: calc(var(--size-1) * 3);
+}
+
+.writing {
+  background-color: var(--color-yellow);
+
+  padding-block-start: calc(var(--size-1) * 38);
+  padding-block-end: calc(var(--size-1) * 88);
+  clip-path: polygon(0 0%, 100% 25%, 100% 100%, 0 50%);
+
+  margin-top: calc(var(--size-1) * -33);
+  position: relative;
+  z-index: 4;
+}
+
+.writing .posts {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--size-1) * 3);
+  margin-block-end: calc(var(--size-1) * 4);
+}
+
+.writing .posts p {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.writing .posts li {
+  flex: 1;
+}
+
+.writing .posts h3 {
+  margin-block-start: calc(var(--size-1) * 2);
+  margin-block-end: calc(var(--size-1) * 2);
+}
+
+.writing .posts p {
+  font-size: var(--font-size-small);
+  line-height: calc(var(--size-1) * 4);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.writing .posts time {
+  font-size: var(--font-size-xsmall);
+  line-height: calc(var(--size-1) * 3);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.writing .posts a {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.footerContent {
+  margin-top: calc(var(--size-1) * -70);
+}
+
+@media (max-width: 802px) {
+  .main {
+    gap: calc(var(--size-1) * 4);
+  }
+
+  .hero .image img {
+    /* max-height: 304px; */
+    max-height: 20vh;
+    width: auto;
+  }
+
+  .work {
+    padding-block-start: calc(var(--size-1) * 16);
+    padding-block-end: calc(var(--size-1) * 28);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+  }
+
+  .mentoring {
+    padding-block-start: calc(var(--size-1) * 25);
+    padding-block-end: calc(var(--size-1) * 18);
+    clip-path: polygon(0 20%, 100% 0, 100% 90%, 0 100%);
+
+    margin-top: calc(var(--size-1) * -30);
+  }
+
+  .ux {
+    padding-block-start: calc(var(--size-1) * 28);
+    padding-block-end: calc(var(--size-1) * 52);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 70%);
+
+    margin-top: calc(var(--size-1) * -17);
+  }
+
+  .ux .content .title {
+    display: none;
+  }
+
+  .ux .content .links {
+    display: none;
+  }
+}
+
+@media (min-width: 803px) {
+  .ux .titleColumn,
+  .linksColumn {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    text-align: center;
+  }
+
+  .ux .links {
+    gap: var(--size-1);
+    justify-content: space-evenly;
+  }
+}

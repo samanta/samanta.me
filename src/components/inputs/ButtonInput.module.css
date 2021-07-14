@@ -1,0 +1,38 @@
+.textInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: solid 2px var(--color-primary);
+  border-radius: calc(var(--size-1) * 8);
+  padding: 1px;
+}
+
+.textInput input {
+  background-color: inherit;
+  position: absolute;
+  cursor: text;
+  font-size: var(--font-size-small);
+  line-height: 1;
+  outline: none;
+
+  width: 100%;
+  height: 100%;
+  padding: calc(var(--size-1) * 2) calc(var(--size-1) * 23) calc(var(--size-1) * 2)
+    calc(var(--size-1) * 4);
+  border-radius: calc(var(--size-1) * 8);
+  z-index: 1;
+}
+
+.textInput:hover input,
+.textInput:focus-within input {
+  border: none;
+}
+
+.textInput button {
+  z-index: 2;
+}
+
+.hasValidationMessages {
+  border-color: red;
+}
